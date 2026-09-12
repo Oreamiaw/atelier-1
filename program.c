@@ -5,8 +5,8 @@ int main() {
 
     printf("+-----------------------------------------------------------+\n");
     printf("|                                                           |\n");
-    printf("|                                                           |\n");
-    printf("|                                                           |\n");
+    printf("|                          /--A--\\                         |\n");
+    printf("|                         /       \\                        |\n");
     printf("|                                                           |\n");
     printf("|                                                           |\n");
     printf("|                                                           |\n");
