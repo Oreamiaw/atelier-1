@@ -1,7 +1,13 @@
 //instrument de Jayson DUBOST et Tristan CROMBECQUE
 
-//définition des variables et appels
+//bienvenue sur le programme. Ce dernier inclus des valeurs aléatoires pour toutes les valeures numériques du programme.
+//Spécificités :
+//L'altimètre est relié au QNH (pression atmosphérique) comme sur un vrai instrument
+//Les points cardinaux sont liés au cap suivi (aléatoire lui aussi)
 
+
+
+//définition des variables et appels
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
