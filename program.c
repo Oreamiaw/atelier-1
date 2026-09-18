@@ -3,9 +3,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-int speed = 0; //définir la vitesse à 0kts
-int alt = 0; // définir l'altitude à 0ft
-int hdg = 0; //définir le cap suivi
+int speed;//définir la vitesse à 0kts
+int alt; // définir l'altitude à 0ft
+int hdg; //définir le cap suivi
+float QNH = 30.92; // pression de référence (inHg)
 
 
 int main() {
@@ -15,8 +16,9 @@ int main() {
     speed = rand() % 100; // speed devient aléatoire entre 0 et 99kts
     alt = rand() % 10000; // alt devient aléatoire entre 0 et 9999ft
     hdg = rand() % 360; // hdg devient aléatoire entre 0 et 359
+    QNH = 25.0 + (rand() % 1001) / 100.0; // QNH aléatoire entre 25.00 et 35.00
 
-    char gauche, droite;
+    char gauche, droite; //utilisation du char pour les points cardinaux
 
     if (hdg >= 0 && hdg < 90) {
         gauche = 'N';
@@ -48,14 +50,11 @@ int main() {
     printf("|  |   |                     ---                    |   |  |\n");
     printf("|  |   |                                            |   |  |\n");
     printf("|  | - |                 5---------5                | - |  |\n");
-    printf("|  |   |                                       29.92|   |  |\n");
+    printf("|  |   |                                       %.2f|   |  |\n",QNH);
     printf("|  +---+                                            +---+  |\n");
     printf("|              _______________|_______________             |\n");
     printf("|             |  -  |%c|  -  |%3d|  -  |%c|  -  |            |\n",gauche, hdg, droite);
     printf("+----------------------------------------------------------+\n");
     
-
-
-
     return 0;
 }
